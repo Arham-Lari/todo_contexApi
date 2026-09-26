@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { TodoProvider } from './context/index.js'
-import { Todoform } from './components/index.js'
+import { Todoform } from './components/Todoform.jsx'
+import TodoIteam from './components/TodoIteams.jsx'
 
 export function App(){
     const[todos,setTodos] = useState([]);
@@ -34,6 +35,14 @@ export function App(){
         <Todoform />
         </div>
         <div className="flex flex-wrap gap-y-3">
+        {
+            todos.map(todo => (
+                <div key={todo.id}
+                className='w-full'>
+                <TodoIteam todo={todo}/>
+                </div>
+            ) )
+        }
         </div>
         </div>
         </div>
