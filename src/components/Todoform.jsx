@@ -11,21 +11,22 @@ export const Todoform = () => {
         if (!msg) return;
 
         addTodo({msg})
-        setMsg();
+        setMsg("");
     }
-  return (
-      <form onSubmit={add} className="flex">
-      <input 
-      type="text"
-      placeholder="write todo .."
-      className="bg-white text-center ml-2 m-2 rounded-l-2xl text-3xl mr-0"
-      value={msg}
-      onChange={(e)=>setMsg(e.target.value)}
-      />
-      <button type="submit" className="bg-green-500 rounded-r-xl font-bold  text-2xl pl-2 pr-2 mr-0 hover:bg-amber-300">add</button>
-      
-      </form>
-  )
+    return (
+        <form onSubmit={add} className="flex">
+        <input
+        type="text"
+        placeholder="Write Todo..."
+        className="w-full border border-black/10 rounded-l-lg px-3 outline-none duration-150 bg-white/20 py-1.5"
+        value={msg}
+        onChange={(e) => setMsg(e.target.value)}
+        />
+        <button type="submit" className="rounded-r-lg px-3 py-1 bg-green-600 text-white shrink-0 transition-transform duration-200 hover:scale-105  active:text-red-300" >
+        Add
+        </button>   
+        </form>
+    )
 }
 
 export default Todoform;

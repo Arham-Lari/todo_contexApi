@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { TodoProvider } from './context/index.js'
+import { Todoform } from './components/index.js'
 
 export function App(){
     const[todos,setTodos] = useState([]);
@@ -26,7 +27,12 @@ export function App(){
 
     return (
         <TodoProvider value={{addTodo,updateTodo,todos,deleteTodo,toggleComplete}}>
+        <div className='w-dvw h-dvh bg-gray-800 flex justify-center '>
+        <div className='w-fit h-fit bg-gray-700 shadow-2xl rounded-3xl m-10'>
+        <Todoform/>
+        </div>
 
+        </div>
 
         </TodoProvider>
     );
