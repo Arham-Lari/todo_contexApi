@@ -7,7 +7,8 @@ export function App(){
     const[todos,setTodos] = useState([]);
     
     const addTodo = (todo) => {
-        setTodos((prev) => [...prev,{...todo,id:Date.now(),completed:false,}])
+        setTodos((prev) => [...prev,{id:Date.now(),...todo}])
+        console.log(todos)
     };
 
     const updateTodo =(id,todo) => {

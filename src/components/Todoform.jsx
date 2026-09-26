@@ -10,7 +10,7 @@ export const Todoform = () => {
 
         if (!msg) return;
 
-        addTodo({msg})
+        addTodo({completed:false,msg:msg})
         setMsg("");
     }
     return (
