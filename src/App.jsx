@@ -27,13 +27,16 @@ export function App(){
 
     return (
         <TodoProvider value={{addTodo,updateTodo,todos,deleteTodo,toggleComplete}}>
-        <div className='w-dvw h-dvh bg-gray-800 flex justify-center '>
-        <div className='w-fit h-fit bg-gray-700 shadow-2xl rounded-3xl m-10'>
-        <Todoform/>
+        <div className="bg-[#172842] min-h-screen py-8">
+        <div className="w-full max-w-2xl mx-auto shadow-md rounded-lg px-4 py-3 text-white">
+        <h1 className="text-2xl font-bold text-center mb-8 mt-2">Manage Your Todos</h1>
+        <div className="mb-4">
+        <Todoform />
         </div>
-
+        <div className="flex flex-wrap gap-y-3">
         </div>
-
+        </div>
+        </div>
         </TodoProvider>
     );
 }
